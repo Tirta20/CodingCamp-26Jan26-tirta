@@ -1,18 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio Website</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TirtaRevou</title>
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 
-  <h1>Hi Tirta, Welcome to My Website</h1>
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="logo">TirtaRevou</div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#profile">Our Profile</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#message">Message Us</a>
+    </nav>
+  </header>
 
-  <!-- JS nanti -->
+  <!-- HOME -->
+  <section id="home" class="hero">
+    <h1>Hi <span id="name">Name</span>, Welcome to Website</h1>
+    <p>This website is created for RevoU Mini Project submission.</p>
+  </section>
+
+  <!-- HEADQUARTERS -->
+  <section id="portfolio" class="hq">
+    <h2>Our Headquarters</h2>
+    <div class="hq-container">
+      <div class="hq-card">Jakarta</div>
+      <div class="hq-card">Bandung</div>
+      <div class="hq-card">Surabaya</div>
+    </div>
+  </section>
+
+  <!-- OUR PROFILE -->
+  <section id="profile" class="profile">
+    <h2>Our Profile</h2>
+
+    <p>
+      <b>About Company:</b> TirtaRevou is a creative digital company that focuses
+      on building responsive and modern websites.
+    </p>
+
+    <h3>Vision</h3>
+    <p>To become a trusted digital solution partner for everyone.</p>
+
+    <h3>Mission</h3>
+    <ul>
+      <li>Create modern responsive web design</li>
+      <li>Deliver high quality user experience</li>
+      <li>Support digital transformation</li>
+    </ul>
+  </section>
+
+  <!-- MESSAGE US -->
+  <section id="message" class="message">
+    <h2>Message Us</h2>
+
+    <form id="messageForm">
+      <input type="text" id="userName" placeholder="Your Name" required />
+      <input type="email" id="userEmail" placeholder="Your Email" required />
+      <input type="text" id="userPhone" placeholder="Phone Number" required />
+      <textarea id="userMessage" placeholder="Your Message" required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+
+    <div class="output">
+      <h3>Submitted Data:</h3>
+      <p id="result"></p>
+    </div>
+  </section>
+
   <script src="js/script.js"></script>
 </body>
 </html>
