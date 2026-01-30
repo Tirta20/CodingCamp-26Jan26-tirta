@@ -45,7 +45,6 @@ document.getElementById("formMessage").addEventListener("submit", function(e){
 
     document.getElementById("rHQ").innerText = selectedHQ;
 
-    /* Bandung png, lainnya jpg */
     let fileExt = selectedHQ === "Bandung" ? "png" : "jpg";
 
     document.getElementById("hqPreview").innerHTML =
