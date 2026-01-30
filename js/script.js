@@ -1,33 +1,33 @@
-// ===== Welcome Prompt =====
-let userName = prompt("Masukkan nama kamu:");
-document.getElementById("username").innerText = userName;
+document.getElementById("formMessage").addEventListener("submit", function(e){
+    e.preventDefault();
 
-// ===== Current Time =====
-function updateTime() {
-  document.getElementById("currentTime").innerText =
-    new Date().toLocaleString();
-}
+    let name  = document.getElementById("name").value.trim();
+    let birth = document.getElementById("birth").value;
+    let msg   = document.getElementById("msg").value.trim();
 
-updateTime();
+    let genderEl = document.querySelector('input[name="gender"]:checked');
+    let gender = genderEl ? genderEl.value : "";
 
-// ===== Form Validation =====
-document.getElementById("messageForm").addEventListener("submit", function (e) {
-  e.preventDefault();
+    // validasi wajib isi semua
+    if(name === "" || birth === "" || gender === "" || msg === ""){
+        alert("Semua field harus diisi!");
+        return;
+    }
 
-  let name = document.getElementById("nameInput").value;
-  let email = document.getElementById("emailInput").value;
-  let phone = document.getElementById("phoneInput").value;
-  let message = document.getElementById("messageInput").value;
+    // ubah teks welcome jadi Hi Nama
+    document.getElementById("welcomeText").innerText =
+        "Hi " + name + ", Welcome To Website";
 
-  if (name === "" || email === "" || phone === "" || message === "") {
-    alert("Semua field wajib diisi!");
-    return;
-  }
+    // tampilkan hasil di kotak kanan
+    document.getElementById("rName").innerText   = name;
+    document.getElementById("rBirth").innerText  = birth;
+    document.getElementById("rGender").innerText = gender;
+    document.getElementById("rMsg").innerText    = msg;
 
-  document.getElementById("outName").innerText = name;
-  document.getElementById("outEmail").innerText = email;
-  document.getElementById("outPhone").innerText = phone;
-  document.getElementById("outMessage").innerText = message;
+    // waktu sekarang
+    let now = new Date();
+    document.getElementById("time").innerText = now.toString();
 
-  updateTime();
+    // reset form setelah submit
+    this.reset();
 });

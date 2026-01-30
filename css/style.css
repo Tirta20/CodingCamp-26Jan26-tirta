@@ -1,112 +1,218 @@
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
 }
 
-/* ===== NAVBAR ===== */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 40px;
-  border-bottom: 2px solid black;
+body{
+    background:#f4f4f4;
+    line-height:1.5;
 }
 
-.logo {
-  font-weight: bold;
-  font-size: 20px;
+/* Navbar */
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 40px;
+    background:#333;
+    color:#fff;
 }
 
-.nav-links a {
-  margin-left: 20px;
-  text-decoration: none;
-  color: black;
+.menu{
+    list-style:none;
+    display:flex;
+    gap:25px;
 }
 
-/* ===== SECTION ===== */
-section {
-  padding: 30px 40px;
+.menu a{
+    color:#fff;
+    text-decoration:none;
 }
 
-hr {
-  border: 1px solid black;
+/* Banner */
+.banner{
+    text-align:center;
+    padding:80px 20px;
+    background:#eaeaea;
 }
 
-/* ===== HEADQUARTERS ===== */
-.hq-list {
-  display: flex;
-  gap: 60px;
-  margin-top: 20px;
+.banner h1{
+    margin-bottom:10px;
 }
 
-.hq-item {
-  text-align: center;
+/* Section umum */
+section{
+    max-width:1000px;
+    margin:50px auto;
+    padding:0 20px;
 }
 
-.hq-img {
-  width: 90px;
-  height: 90px;
-  border-radius: 50%;
-  border: 2px solid black;
-  object-fit: cover;
+section h2{
+    margin-bottom:15px;
 }
 
-/* ===== MESSAGE US ===== */
-.message-container {
-  display: flex;
-  gap: 40px;
-  margin-top: 20px;
+/* Vision Mission */
+.vm{
+    display:flex;
+    gap:25px;
+    margin-top:20px;
 }
 
-/* FORM */
-.form-box {
-  width: 50%;
-  display: flex;
-  flex-direction: column;
+.box{
+    flex:1;
+    background:#fff;
+    padding:20px;
+    border:1px solid #ccc;
 }
 
-.form-box input,
-.form-box textarea {
-  margin-bottom: 15px;
-  padding: 8px;
-  border: 1px solid black;
+.box h3{
+    margin-bottom:10px;
 }
 
-button {
-  padding: 10px;
-  background: black;
-  color: white;
-  border: none;
-  cursor: pointer;
+.box ul{
+    margin-left:18px;
 }
 
-/* OUTPUT */
-.output-box {
-  width: 50%;
-  border: 1px solid black;
-  padding: 15px;
+/* Headquarter */
+.hq-list{
+    display:flex;
+    justify-content:space-around;
+    margin-top:30px;
 }
 
-/* ===== RESPONSIVE ===== */
-@media (max-width: 768px) {
+.circle{
+    width:130px;
+    height:130px;
+    border:2px solid #333;
+    border-radius:50%;
 
-  .navbar {
-    flex-direction: column;
-    gap: 10px;
-  }
+    display:flex;
+    align-items:center;
+    justify-content:center;
 
-  .hq-list {
-    flex-direction: column;
-    align-items: center;
-  }
+    font-weight:bold;
+    color:white;
 
-  .message-container {
-    flex-direction: column;
-  }
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
 
-  .form-box,
-  .output-box {
-    width: 100%;
-  }
+    text-shadow:0 0 6px black;
+}
+
+/* Tambahan gambar sesuai file kamu */
+.circle:nth-child(1){
+    background-image:url("../images/Jakarta.jpg");
+}
+
+.circle:nth-child(2){
+    background-image:url("../images/Bandung.png");
+}
+
+.circle:nth-child(3){
+    background-image:url("../images/Surabaya.jpg");
+}
+
+/* Message */
+.message-wrap{
+    display:flex;
+    gap:30px;
+    margin-top:25px;
+}
+
+/* Form kiri */
+form{
+    flex:1;
+    display:flex;
+    flex-direction:column;
+}
+
+form label{
+    margin-bottom:5px;
+    font-weight:bold;
+}
+
+form input,
+form textarea{
+    margin-bottom:15px;
+    padding:10px;
+    border:1px solid #aaa;
+    border-radius:4px;
+}
+
+form textarea{
+    min-height:100px;
+    resize:vertical;
+}
+
+/* radio gender */
+.radio-group{
+    display:flex;
+    gap:25px;
+    margin-bottom:15px;
+}
+
+.radio-group label{
+    font-weight:normal;
+}
+
+/* tombol submit */
+form button{
+    padding:12px;
+    background:#333;
+    color:#fff;
+    border:none;
+    border-radius:4px;
+    cursor:pointer;
+    margin-top:5px;
+}
+
+form button:hover{
+    background:#555;
+}
+
+/* Output kanan */
+.result{
+    flex:1;
+    border:1px solid #aaa;
+    padding:20px;
+    background:#fff;
+    border-radius:4px;
+}
+
+/* rapihin isi output */
+.result p{
+    margin-bottom:12px;
+}
+
+.result b{
+    display:inline-block;
+    width:130px; /* biar rata */
+}
+
+/* Footer */
+footer{
+    text-align:right;
+    padding:20px;
+    font-size:12px;
+}
+
+/* Responsive */
+@media(max-width:768px){
+    .vm,
+    .hq-list,
+    .message-wrap{
+        flex-direction:column;
+        align-items:stretch;
+    }
+
+    .circle{
+        margin:0 auto 15px auto;
+    }
+
+    form, .result{
+        width:100%;
+    }
 }
