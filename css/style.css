@@ -58,21 +58,30 @@ body{
   font-size:14px;
 }
 
+
 /* ========================= */
-/* GARIS PEMBATAS DI PAGE */
+/* GARIS PEMBATAS FULL LAYAR */
 /* ========================= */
 .section-border{
+  width:100%;
   border-bottom:2px solid #333;
-  padding-bottom:50px;
-  margin-bottom:50px;
 }
+
+/* Container supaya isi tetap tengah */
+.container{
+  max-width:1000px;
+  margin:0 auto;
+  padding:50px 20px;
+}
+
 
 /* ========================= */
 /* HOME */
 /* ========================= */
 .banner{
-  padding:50px 60px;
-  background:#fff;
+  max-width:1000px;
+  margin:0 auto;
+  padding:50px 40px;
   text-align:left;
 }
 
@@ -83,18 +92,6 @@ body{
   color:#333;
 }
 
-/* ========================= */
-/* SECTION UMUM */
-/* ========================= */
-section{
-  max-width:1000px;
-  margin:0 auto;
-  padding:50px 20px;
-}
-
-h2{
-  margin-bottom:20px;
-}
 
 /* ========================= */
 /* HEADQUARTER */
@@ -144,6 +141,7 @@ h2{
 .circle.active{
   border:4px solid lime;
 }
+
 
 /* ========================= */
 /* MESSAGE FORM */
@@ -197,6 +195,7 @@ form button{
   border:2px solid #333;
 }
 
+
 /* ========================= */
 /* FOOTER */
 /* ========================= */
@@ -209,19 +208,21 @@ footer{
 }
 
 
+/* ========================= */
 /* RESPONSIVE */
+/* ========================= */
 @media(max-width:768px){
 
-    .hq-list,
-    .message-wrap{
-        flex-direction:column;
-    }
+  .hq-list,
+  .message-wrap{
+    flex-direction:column;
+  }
 
-    .circle{
-        margin:0 auto 15px auto;
-    }
+  .circle{
+    margin:0 auto 15px auto;
+  }
 
-    .banner{
-        padding:40px 25px;
-    }
+  .banner{
+    padding:40px 25px;
+  }
 }
