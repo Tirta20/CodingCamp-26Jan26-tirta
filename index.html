@@ -7,7 +7,9 @@
 </head>
 <body>
 
-  <!-- NAVBAR (SESUAI TEMPLATE REVOU) -->
+<div class="page-wrapper">
+
+  <!-- NAVBAR (TIDAK DIOTAK-ATIK) -->
   <nav class="navbar">
     <div class="logo-circle">
       <img src="img/Revou.jpg" alt="logo">
@@ -33,17 +35,28 @@
   </section>
 
 
-  <!-- OUR PROFILE (Placeholder aja biar navbar nyambung) -->
-  <section id="profile" class="section-border">
-    <h2>Our Profile</h2>
-    <p>Section ini bisa diisi nanti sesuai kebutuhan.</p>
-  </section>
+  <!-- HEADQUARTER -->
+  <section id="hq" class="section-border">
+    <h2>Our Headquarter</h2>
 
+    <div class="hq-list">
 
-  <!-- PORTFOLIO (Placeholder aja biar navbar nyambung) -->
-  <section id="portfolio" class="section-border">
-    <h2>Portfolio</h2>
-    <p>Section ini bisa diisi nanti sesuai kebutuhan.</p>
+      <div class="hq-item">
+        <div class="circle" data-city="Jakarta"></div>
+        <p>Jakarta</p>
+      </div>
+
+      <div class="hq-item">
+        <div class="circle" data-city="Bandung"></div>
+        <p>Bandung</p>
+      </div>
+
+      <div class="hq-item">
+        <div class="circle" data-city="Surabaya"></div>
+        <p>Surabaya</p>
+      </div>
+
+    </div>
   </section>
 
 
@@ -53,6 +66,7 @@
 
     <div class="message-wrap">
 
+      <!-- FORM -->
       <form id="formMessage">
         <label>Nama</label>
         <input type="text" id="name">
@@ -80,6 +94,9 @@
         <p><b>Tanggal Lahir :</b> <span id="rBirth"></span></p>
         <p><b>Jenis Kelamin :</b> <span id="rGender"></span></p>
         <p><b>Pesan :</b> <span id="rMsg"></span></p>
+
+        <p><b>Headquarter :</b> <span id="rHQ"></span></p>
+        <div id="hqPreview"></div>
       </div>
 
     </div>
@@ -91,6 +108,8 @@
     Created by Tirta
   </footer>
 
-  <script src="js/script.js"></script>
+</div>
+
+<script src="js/script.js"></script>
 </body>
 </html>
