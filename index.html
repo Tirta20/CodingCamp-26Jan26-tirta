@@ -4,13 +4,10 @@
     <meta charset="UTF-8">
     <title>My Website</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- panggil CSS -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<!-- Navbar -->
 <nav class="navbar">
     <div class="logo">My Website</div>
     <ul class="menu">
@@ -20,13 +17,11 @@
     </ul>
 </nav>
 
-<!-- Home / Banner -->
 <section id="home" class="banner">
     <h1 id="welcomeText">Hi, Welcome To Website</h1>
     <p>Ini adalah website latihan pertama</p>
 </section>
 
-<!-- Profile -->
 <section id="profile" class="profile">
     <h2>About The Company</h2>
     <p>
@@ -50,7 +45,6 @@
     </div>
 </section>
 
-<!-- Headquarter -->
 <section class="hq">
     <h2>Our Headquarter</h2>
     <div class="hq-list">
@@ -60,35 +54,41 @@
     </div>
 </section>
 
-<!-- Message Us -->
 <section id="message" class="message">
     <h2>Message Us</h2>
 
     <div class="message-wrap">
-        <!-- Form -->
+        <!-- FORM -->
         <form id="formMessage">
-            <label>Name</label>
+            <label>Nama</label>
             <input type="text" id="name">
 
-            <label>Email</label>
-            <input type="email" id="email">
+            <label>Tanggal Lahir</label>
+            <input type="date" id="birth">
 
-            <label>Phone Number</label>
-            <input type="text" id="phone">
+            <label>Jenis Kelamin</label>
+            <div class="radio-group">
+                <label>
+                    <input type="radio" name="gender" value="Laki-laki"> Laki-laki
+                </label>
+                <label>
+                    <input type="radio" name="gender" value="Perempuan"> Perempuan
+                </label>
+            </div>
 
-            <label>Message</label>
+            <label>Pesan</label>
             <textarea id="msg"></textarea>
 
             <button type="submit">Submit</button>
         </form>
 
-        <!-- Hasil output -->
+        <!-- HASIL -->
         <div class="result">
             <p><b>Current time :</b> <span id="time"></span></p>
-            <p><b>Name :</b> <span id="rName"></span></p>
-            <p><b>Email :</b> <span id="rEmail"></span></p>
-            <p><b>Phone :</b> <span id="rPhone"></span></p>
-            <p><b>Message :</b> <span id="rMsg"></span></p>
+            <p><b>Nama :</b> <span id="rName"></span></p>
+            <p><b>Tanggal Lahir :</b> <span id="rBirth"></span></p>
+            <p><b>Jenis Kelamin :</b> <span id="rGender"></span></p>
+            <p><b>Pesan :</b> <span id="rMsg"></span></p>
         </div>
     </div>
 </section>
@@ -97,7 +97,6 @@
     Created by Kamu
 </footer>
 
-<!-- panggil JS -->
 <script src="js/script.js"></script>
 </body>
 </html>

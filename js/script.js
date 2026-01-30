@@ -2,29 +2,32 @@ document.getElementById("formMessage").addEventListener("submit", function(e){
     e.preventDefault();
 
     let name  = document.getElementById("name").value.trim();
-    let email = document.getElementById("email").value.trim();
-    let phone = document.getElementById("phone").value.trim();
+    let birth = document.getElementById("birth").value;
     let msg   = document.getElementById("msg").value.trim();
 
-    if(name === "" || email === "" || phone === "" || msg === ""){
+    let genderEl = document.querySelector('input[name="gender"]:checked');
+    let gender = genderEl ? genderEl.value : "";
+
+    // validasi wajib isi semua
+    if(name === "" || birth === "" || gender === "" || msg === ""){
         alert("Semua field harus diisi!");
         return;
     }
 
-    // sapaan di home
+    // ubah teks welcome jadi Hi Nama
     document.getElementById("welcomeText").innerText =
         "Hi " + name + ", Welcome To Website";
 
-    // tampilkan hasil
-    document.getElementById("rName").innerText  = name;
-    document.getElementById("rEmail").innerText = email;
-    document.getElementById("rPhone").innerText = phone;
-    document.getElementById("rMsg").innerText   = msg;
+    // tampilkan hasil di kotak kanan
+    document.getElementById("rName").innerText   = name;
+    document.getElementById("rBirth").innerText  = birth;
+    document.getElementById("rGender").innerText = gender;
+    document.getElementById("rMsg").innerText    = msg;
 
     // waktu sekarang
     let now = new Date();
     document.getElementById("time").innerText = now.toString();
 
-    // reset form
+    // reset form setelah submit
     this.reset();
 });
