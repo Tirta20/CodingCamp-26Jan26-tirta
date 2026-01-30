@@ -58,48 +58,73 @@ body{
   font-size:14px;
 }
 
-
 /* ========================= */
-/* GARIS PEMBATAS FULL LAYAR */
+/* GARIS PEMBATAS FULL PAGE */
 /* ========================= */
 .section-border{
   width:100%;
   border-bottom:2px solid #333;
 }
 
-/* Container supaya isi tetap tengah */
-.container{
-  max-width:1000px;
-  margin:0 auto;
-  padding:50px 20px;
+/* ========================= */
+/* SEMUA SECTION ISI KE KIRI */
+/* ========================= */
+section{
+  width:100%;
+  margin:0;
+  padding:50px 80px;
 }
-
 
 /* ========================= */
 /* HOME */
 /* ========================= */
 .banner{
-  max-width:1000px;
-  margin:0 auto;
-  padding:50px 40px;
+  width:100%;
+  padding:0;
   text-align:left;
 }
 
-.placeholder{
-  margin-top:200px;
-  text-align:center;
-  font-size:14px;
-  color:#333;
+.banner h1{
+  font-size:32px;
+  font-weight:bold;
+  margin-bottom:10px;
 }
 
+.banner p{
+  font-size:14px;
+}
+
+/* ✅ Placeholder beneran di tengah */
+.placeholder{
+  margin-top:200px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  width:100%;
+  height:200px;
+
+  font-size:18px;
+  color:#333;
+}
 
 /* ========================= */
 /* HEADQUARTER */
 /* ========================= */
+h2{
+  margin-bottom:20px;
+}
+
 .hq-list{
   display:flex;
-  justify-content:space-around;
+  justify-content:flex-start;
+  gap:50px;
   margin-top:30px;
+}
+
+/* ✅ HQ item (gambar atas, teks bawah) */
+.hq-item{
+  text-align:center;
 }
 
 .circle{
@@ -108,27 +133,20 @@ body{
   border:2px solid #333;
   border-radius:50%;
 
-  display:flex;
-  align-items:center;
-  justify-content:center;
-
-  font-weight:bold;
-  color:white;
-
   background-size:cover;
   background-position:center;
-  text-shadow:0 0 6px black;
 }
 
-.circle:nth-child(1){
+/* Background gambar HQ */
+.circle[data-city="Jakarta"]{
   background-image:url("../img/Jakarta.jpg");
 }
 
-.circle:nth-child(2){
+.circle[data-city="Bandung"]{
   background-image:url("../img/Bandung.png");
 }
 
-.circle:nth-child(3){
+.circle[data-city="Surabaya"]{
   background-image:url("../img/Surabaya.jpg");
 }
 
@@ -142,19 +160,24 @@ body{
   border:4px solid lime;
 }
 
-
 /* ========================= */
 /* MESSAGE FORM */
 /* ========================= */
 .message-wrap{
   display:flex;
   gap:30px;
+  justify-content:flex-start;
 }
 
 form{
   flex:1;
   display:flex;
   flex-direction:column;
+}
+
+form label{
+  font-weight:bold;
+  margin-bottom:5px;
 }
 
 form input,
@@ -179,22 +202,31 @@ form button{
   cursor:pointer;
 }
 
+/* ✅ Output lebih rapi + ada jarak */
 .result{
   flex:1;
   border:1px solid #aaa;
-  padding:20px;
+  padding:25px;
   background:#fff;
 }
 
+.result p{
+  margin-bottom:15px;   /* jarak antar baris */
+}
+
+.result b{
+  display:inline-block;
+  width:130px;          /* biar sejajar */
+}
+
 #hqPreview img{
-  margin-top:10px;
+  margin-top:15px;
   width:130px;
   height:130px;
   border-radius:12px;
   object-fit:cover;
   border:2px solid #333;
 }
-
 
 /* ========================= */
 /* FOOTER */
@@ -207,22 +239,26 @@ footer{
   color:white;
 }
 
-
 /* ========================= */
 /* RESPONSIVE */
 /* ========================= */
 @media(max-width:768px){
 
+  section{
+    padding:40px 25px;
+  }
+
   .hq-list,
   .message-wrap{
     flex-direction:column;
+    align-items:flex-start;
+  }
+
+  .hq-item{
+    text-align:left;
   }
 
   .circle{
-    margin:0 auto 15px auto;
-  }
-
-  .banner{
-    padding:40px 25px;
+    margin-bottom:10px;
   }
 }
