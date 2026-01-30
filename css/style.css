@@ -104,15 +104,15 @@ section h2{
 
 /* Tambahan gambar sesuai file kamu */
 .circle:nth-child(1){
-    background-image:url("../images/Jakarta.jpg");
+    background-image:url("../img/Jakarta.jpg");
 }
 
 .circle:nth-child(2){
-    background-image:url("../images/Bandung.png");
+    background-image:url("../img/Bandung.png");
 }
 
 .circle:nth-child(3){
-    background-image:url("../images/Surabaya.jpg");
+    background-image:url("../img/Surabaya.jpg");
 }
 
 /* Message */
