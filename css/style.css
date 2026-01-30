@@ -6,7 +6,7 @@
 }
 
 body{
-    background:#f4f4f4;
+    background:#ffffff;
     line-height:1.5;
 }
 
@@ -42,7 +42,7 @@ body{
     object-fit:cover;
 }
 
-/* Menu kotak kanan */
+/* Menu kanan */
 .menu{
     list-style:none;
     display:flex;
@@ -63,20 +63,36 @@ body{
 /* ========================= */
 /* HOME BANNER SESUAI MOCKUP */
 /* ========================= */
+
+/* Banner full lebar */
+#home{
+    max-width:none;
+    margin:0;
+    padding:0;
+}
+
 .banner{
-    padding:50px 60px;
-    border:none;
+    width:100%;
+    padding:40px 60px;
+
     background:#fff;
+    border:2px solid #333;
     text-align:left;
 }
 
 .banner h1{
-    margin-bottom:10px;
+    font-size:28px;
+    font-weight:bold;
+    margin-bottom:8px;
 }
 
-/* Placeholder ukuran */
+.banner p{
+    font-size:14px;
+}
+
+/* Placeholder tengah */
 .placeholder{
-    margin-top:130px;
+    margin-top:200px;
     text-align:center;
     font-size:14px;
     color:#333;
@@ -96,7 +112,7 @@ section h2{
 }
 
 /* ========================= */
-/* HEADQUARTER (TETAP) */
+/* HEADQUARTER */
 /* ========================= */
 .hq-list{
     display:flex;
@@ -229,7 +245,9 @@ form button:hover{
     border:2px solid #333;
 }
 
-/* Footer */
+/* ========================= */
+/* FOOTER */
+/* ========================= */
 footer{
     width:100%;
     text-align:center;
@@ -240,9 +258,11 @@ footer{
     margin-top:50px;
 }
 
-
-/* Responsive */
+/* ========================= */
+/* RESPONSIVE */
+/* ========================= */
 @media(max-width:768px){
+
     .hq-list,
     .message-wrap{
         flex-direction:column;
@@ -255,5 +275,9 @@ footer{
 
     form, .result{
         width:100%;
+    }
+
+    .banner{
+        padding:30px 25px;
     }
 }
