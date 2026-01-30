@@ -10,9 +10,6 @@ body{
   line-height:1.5;
 }
 
-/* ========================= */
-/* NAVBAR (TIDAK DIUBAH) */
-/* ========================= */
 .navbar{
   display:flex;
   justify-content:space-between;
@@ -58,35 +55,23 @@ body{
   font-size:14px;
 }
 
-/* ========================= */
-/* GARIS KIRI KANAN FULL PAGE */
-/* ========================= */
 .page-wrapper{
   width:100%;
   border-left:2px solid #333;
   border-right:2px solid #333;
 }
 
-/* ========================= */
-/* GARIS PEMBATAS FULL PAGE */
-/* ========================= */
 .section-border{
   width:100%;
   border-bottom:2px solid #333;
 }
 
-/* ========================= */
-/* SEMUA SECTION ISI KE KIRI */
-/* ========================= */
 section{
   width:100%;
   margin:0;
   padding:50px 80px;
 }
 
-/* ========================= */
-/* HOME */
-/* ========================= */
 .banner{
   width:100%;
   text-align:left;
@@ -102,7 +87,6 @@ section{
   font-size:14px;
 }
 
-/* Placeholder angka di tengah + kecil */
 .placeholder{
   margin-top:200px;
   text-align:center;
@@ -110,9 +94,6 @@ section{
   color:#333;
 }
 
-/* ========================= */
-/* HEADQUARTER */
-/* ========================= */
 h2{
   margin-bottom:20px;
 }
@@ -124,7 +105,6 @@ h2{
   margin-top:30px;
 }
 
-/* Wrapper kota */
 .hq-item{
   display:flex;
   flex-direction:column;
@@ -132,7 +112,6 @@ h2{
   gap:10px;
 }
 
-/* Lingkaran gambar */
 .circle{
   width:130px;
   height:130px;
@@ -154,7 +133,6 @@ h2{
   border:4px solid lime;
 }
 
-/* Background gambar HQ */
 .circle[data-city="Jakarta"]{
   background-image:url("../img/Jakarta.jpg");
 }
@@ -167,15 +145,11 @@ h2{
   background-image:url("../img/Surabaya.jpg");
 }
 
-/* Nama kota dibawah gambar */
 .city-name{
   font-size:16px;
   font-weight:bold;
 }
 
-/* ========================= */
-/* MESSAGE FORM */
-/* ========================= */
 .message-wrap{
   display:flex;
   gap:40px;
@@ -219,7 +193,6 @@ form button:hover{
   background:#555;
 }
 
-/* Output box kanan */
 .result{
   flex:1;
   border:1px solid #aaa;
@@ -227,7 +200,6 @@ form button:hover{
   background:#fff;
 }
 
-/* Jarak antar output */
 .result p{
   margin-bottom:15px;
 }
@@ -237,7 +209,6 @@ form button:hover{
   width:140px;
 }
 
-/* Preview HQ Output */
 #hqPreview img{
   margin-top:10px;
   width:130px;
@@ -247,9 +218,6 @@ form button:hover{
   border:2px solid #333;
 }
 
-/* ========================= */
-/* FOOTER */
-/* ========================= */
 footer{
   width:100%;
   text-align:center;
@@ -258,9 +226,6 @@ footer{
   color:white;
 }
 
-/* ========================= */
-/* RESPONSIVE */
-/* ========================= */
 @media(max-width:768px){
 
   section{

@@ -1,6 +1,5 @@
 let selectedHQ = "";
 
-/* PILIH HQ */
 document.querySelectorAll(".circle").forEach(circle=>{
   circle.addEventListener("click", function(){
 
@@ -12,7 +11,6 @@ document.querySelectorAll(".circle").forEach(circle=>{
   });
 });
 
-/* SUBMIT FORM */
 document.getElementById("formMessage").addEventListener("submit", function(e){
   e.preventDefault();
 
