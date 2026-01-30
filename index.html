@@ -7,7 +7,7 @@
 </head>
 <body>
 
-  <!-- NAVBAR (TIDAK DIOTAK-ATIK) -->
+  <!-- NAVBAR (SESUAI TEMPLATE REVOU) -->
   <nav class="navbar">
     <div class="logo-circle">
       <img src="img/Revou.jpg" alt="logo">
@@ -15,7 +15,8 @@
 
     <ul class="menu">
       <li><a href="#home">Home</a></li>
-      <li><a href="#hq">Headquarter</a></li>
+      <li><a href="#profile">Our Profile</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
       <li><a href="#message">Message Us</a></li>
     </ul>
   </nav>
@@ -32,73 +33,55 @@
   </section>
 
 
-  <!-- HEADQUARTER -->
-  <section id="hq" class="section-border">
-    <div class="container">
-      <h2>Our Headquarter</h2>
+  <!-- OUR PROFILE (Placeholder aja biar navbar nyambung) -->
+  <section id="profile" class="section-border">
+    <h2>Our Profile</h2>
+    <p>Section ini bisa diisi nanti sesuai kebutuhan.</p>
+  </section>
 
-      <div class="hq-list">
-        
-        <div class="hq-item">
-          <div class="circle" data-city="Jakarta"></div>
-          <p>Jakarta</p>
-        </div>
 
-        <div class="hq-item">
-          <div class="circle" data-city="Bandung"></div>
-          <p>Bandung</p>
-        </div>
-
-        <div class="hq-item">
-          <div class="circle" data-city="Surabaya"></div>
-          <p>Surabaya</p>
-        </div>
-
-      </div>
-    </div>
+  <!-- PORTFOLIO (Placeholder aja biar navbar nyambung) -->
+  <section id="portfolio" class="section-border">
+    <h2>Portfolio</h2>
+    <p>Section ini bisa diisi nanti sesuai kebutuhan.</p>
   </section>
 
 
   <!-- MESSAGE US -->
   <section id="message" class="section-border">
-    <div class="container">
-      <h2>Message Us</h2>
+    <h2>Message Us</h2>
 
-      <div class="message-wrap">
+    <div class="message-wrap">
 
-        <form id="formMessage">
-          <label>Nama</label>
-          <input type="text" id="name">
+      <form id="formMessage">
+        <label>Nama</label>
+        <input type="text" id="name">
 
-          <label>Tanggal Lahir</label>
-          <input type="date" id="birth">
+        <label>Tanggal Lahir</label>
+        <input type="date" id="birth">
 
-          <label>Jenis Kelamin</label>
-          <div class="radio-group">
-            <label><input type="radio" name="gender" value="Laki-laki"> Laki-laki</label>
-            <label><input type="radio" name="gender" value="Perempuan"> Perempuan</label>
-          </div>
-
-          <label>Pesan</label>
-          <textarea id="msg"></textarea>
-
-          <button type="submit">Submit</button>
-        </form>
-
-
-        <!-- OUTPUT -->
-        <div class="result">
-          <p><b>Current time :</b> <span id="time"></span></p>
-          <p><b>Nama :</b> <span id="rName"></span></p>
-          <p><b>Tanggal Lahir :</b> <span id="rBirth"></span></p>
-          <p><b>Jenis Kelamin :</b> <span id="rGender"></span></p>
-          <p><b>Pesan :</b> <span id="rMsg"></span></p>
-
-          <p><b>Headquarter :</b> <span id="rHQ"></span></p>
-          <div id="hqPreview"></div>
+        <label>Jenis Kelamin</label>
+        <div class="radio-group">
+          <label><input type="radio" name="gender" value="Laki-laki"> Laki-laki</label>
+          <label><input type="radio" name="gender" value="Perempuan"> Perempuan</label>
         </div>
 
+        <label>Pesan</label>
+        <textarea id="msg"></textarea>
+
+        <button type="submit">Submit</button>
+      </form>
+
+
+      <!-- OUTPUT -->
+      <div class="result">
+        <p><b>Current time :</b> <span id="time"></span></p>
+        <p><b>Nama :</b> <span id="rName"></span></p>
+        <p><b>Tanggal Lahir :</b> <span id="rBirth"></span></p>
+        <p><b>Jenis Kelamin :</b> <span id="rGender"></span></p>
+        <p><b>Pesan :</b> <span id="rMsg"></span></p>
       </div>
+
     </div>
   </section>
 
