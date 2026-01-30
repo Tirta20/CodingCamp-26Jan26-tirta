@@ -1,80 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TirtaRevou</title>
+    <meta charset="UTF-8">
+    <title>My Website</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="stylesheet" href="css/style.css" />
+    <!-- panggil CSS -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <!-- NAVBAR -->
-  <header class="navbar">
-    <div class="logo">TirtaRevou</div>
-    <nav>
-      <a href="#home">Home</a>
-      <a href="#profile">Our Profile</a>
-      <a href="#portfolio">Portfolio</a>
-      <a href="#message">Message Us</a>
-    </nav>
-  </header>
+<!-- Navbar -->
+<nav class="navbar">
+    <div class="logo">My Website</div>
+    <ul class="menu">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#profile">Our Profile</a></li>
+        <li><a href="#message">Message Us</a></li>
+    </ul>
+</nav>
 
-  <!-- HOME -->
-  <section id="home" class="hero">
-    <h1>Hi <span id="name">Name</span>, Welcome to Website</h1>
-    <p>This website is created for RevoU Mini Project submission.</p>
-  </section>
+<!-- Home / Banner -->
+<section id="home" class="banner">
+    <h1 id="welcomeText">Hi, Welcome To Website</h1>
+    <p>Ini adalah website latihan pertama</p>
+</section>
 
-  <!-- HEADQUARTERS -->
-  <section id="portfolio" class="hq">
-    <h2>Our Headquarters</h2>
-    <div class="hq-container">
-      <div class="hq-card">Jakarta</div>
-      <div class="hq-card">Bandung</div>
-      <div class="hq-card">Surabaya</div>
-    </div>
-  </section>
-
-  <!-- OUR PROFILE -->
-  <section id="profile" class="profile">
-    <h2>Our Profile</h2>
-
+<!-- Profile -->
+<section id="profile" class="profile">
+    <h2>About The Company</h2>
     <p>
-      <b>About Company:</b> TirtaRevou is a creative digital company that focuses
-      on building responsive and modern websites.
+        Perusahaan kami bergerak di bidang teknologi dan layanan digital
+        untuk membantu bisnis berkembang lebih cepat dan efisien.
     </p>
 
-    <h3>Vision</h3>
-    <p>To become a trusted digital solution partner for everyone.</p>
+    <div class="vm">
+        <div class="box">
+            <h3>Vision</h3>
+            <p>Menjadi perusahaan teknologi terbaik dan terpercaya.</p>
+        </div>
+        <div class="box">
+            <h3>Mission</h3>
+            <ul>
+                <li>Menyediakan solusi digital berkualitas</li>
+                <li>Mengutamakan kepuasan pelanggan</li>
+                <li>Terus berinovasi mengikuti perkembangan zaman</li>
+            </ul>
+        </div>
+    </div>
+</section>
 
-    <h3>Mission</h3>
-    <ul>
-      <li>Create modern responsive web design</li>
-      <li>Deliver high quality user experience</li>
-      <li>Support digital transformation</li>
-    </ul>
-  </section>
+<!-- Headquarter -->
+<section class="hq">
+    <h2>Our Headquarter</h2>
+    <div class="hq-list">
+        <div class="circle">Jakarta</div>
+        <div class="circle">Bandung</div>
+        <div class="circle">Surabaya</div>
+    </div>
+</section>
 
-  <!-- MESSAGE US -->
-  <section id="message" class="message">
+<!-- Message Us -->
+<section id="message" class="message">
     <h2>Message Us</h2>
 
-    <form id="messageForm">
-      <input type="text" id="userName" placeholder="Your Name" required />
-      <input type="email" id="userEmail" placeholder="Your Email" required />
-      <input type="text" id="userPhone" placeholder="Phone Number" required />
-      <textarea id="userMessage" placeholder="Your Message" required></textarea>
+    <div class="message-wrap">
+        <!-- Form -->
+        <form id="formMessage">
+            <label>Name</label>
+            <input type="text" id="name">
 
-      <button type="submit">Send Message</button>
-    </form>
+            <label>Email</label>
+            <input type="email" id="email">
 
-    <div class="output">
-      <h3>Submitted Data:</h3>
-      <p id="result"></p>
+            <label>Phone Number</label>
+            <input type="text" id="phone">
+
+            <label>Message</label>
+            <textarea id="msg"></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+
+        <!-- Hasil output -->
+        <div class="result">
+            <p><b>Current time :</b> <span id="time"></span></p>
+            <p><b>Name :</b> <span id="rName"></span></p>
+            <p><b>Email :</b> <span id="rEmail"></span></p>
+            <p><b>Phone :</b> <span id="rPhone"></span></p>
+            <p><b>Message :</b> <span id="rMsg"></span></p>
+        </div>
     </div>
-  </section>
+</section>
 
-  <script src="js/script.js"></script>
+<footer>
+    Created by Kamu
+</footer>
+
+<!-- panggil JS -->
+<script src="js/script.js"></script>
 </body>
 </html>

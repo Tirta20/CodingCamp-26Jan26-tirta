@@ -1,25 +1,30 @@
-// Welcome Name (Dynamic)
-let user = prompt("Enter your name:");
-document.getElementById("name").innerText = user;
+document.getElementById("formMessage").addEventListener("submit", function(e){
+    e.preventDefault();
 
-// Form Validation + Output
-document.getElementById("messageForm").addEventListener("submit", function (e) {
-  e.preventDefault();
+    let name  = document.getElementById("name").value.trim();
+    let email = document.getElementById("email").value.trim();
+    let phone = document.getElementById("phone").value.trim();
+    let msg   = document.getElementById("msg").value.trim();
 
-  let name = document.getElementById("userName").value;
-  let email = document.getElementById("userEmail").value;
-  let phone = document.getElementById("userPhone").value;
-  let message = document.getElementById("userMessage").value;
+    if(name === "" || email === "" || phone === "" || msg === ""){
+        alert("Semua field harus diisi!");
+        return;
+    }
 
-  if (name === "" || email === "" || phone === "" || message === "") {
-    alert("All fields must be filled!");
-    return;
-  }
+    // sapaan di home
+    document.getElementById("welcomeText").innerText =
+        "Hi " + name + ", Welcome To Website";
 
-  document.getElementById("result").innerHTML = `
-    <b>Name:</b> ${name} <br>
-    <b>Email:</b> ${email} <br>
-    <b>Phone:</b> ${phone} <br>
-    <b>Message:</b> ${message}
-  `;
+    // tampilkan hasil
+    document.getElementById("rName").innerText  = name;
+    document.getElementById("rEmail").innerText = email;
+    document.getElementById("rPhone").innerText = phone;
+    document.getElementById("rMsg").innerText   = msg;
+
+    // waktu sekarang
+    let now = new Date();
+    document.getElementById("time").innerText = now.toString();
+
+    // reset form
+    this.reset();
 });
