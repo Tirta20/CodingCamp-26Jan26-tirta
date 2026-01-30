@@ -1,201 +1,213 @@
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, Helvetica, sans-serif;
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial, Helvetica, sans-serif;
 }
 
 body{
-    background:#ffffff;
-    line-height:1.5;
+  background:#ffffff;
+  line-height:1.5;
 }
 
-/* NAVBAR */
+/* ========================= */
+/* NAVBAR (TIDAK DIUBAH) */
+/* ========================= */
 .navbar{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:15px 40px;
-    background:#fff;
-    border:2px solid #333;
-    position:sticky;
-    top:0;
-    z-index:1000;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:15px 40px;
+
+  background:#fff;
+  border:2px solid #333;
+
+  position:sticky;
+  top:0;
+  z-index:1000;
 }
 
 .logo-circle{
-    width:55px;
-    height:55px;
-    border-radius:50%;
-    overflow:hidden;
-    border:2px solid #333;
+  width:55px;
+  height:55px;
+  border-radius:50%;
+  overflow:hidden;
+  border:2px solid #333;
 }
 
 .logo-circle img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
+  width:100%;
+  height:100%;
+  object-fit:cover;
 }
 
 .menu{
-    list-style:none;
-    display:flex;
+  list-style:none;
+  display:flex;
 }
 
 .menu li{
-    border:none;
+  border:1px solid #333;
 }
 
 .menu a{
-    display:block;
-    padding:8px 18px;
-    text-decoration:none;
-    color:#000;
-    font-size:14px;
+  display:block;
+  padding:8px 18px;
+  text-decoration:none;
+  color:#000;
+  font-size:14px;
 }
 
 /* ========================= */
-/* GARIS PEMBATAS SECTION */
+/* GARIS PEMBATAS DI PAGE */
 /* ========================= */
-.section-line{
-    border-bottom:2px solid #333;
-    padding-bottom:50px;
-    margin-bottom:50px;
+.section-border{
+  border-bottom:2px solid #333;
+  padding-bottom:50px;
+  margin-bottom:50px;
 }
 
+/* ========================= */
 /* HOME */
+/* ========================= */
 .banner{
-    width:100%;
-    padding:70px 90px;
-    background:#fff;
-    text-align:left;
-}
-
-.banner h1{
-    font-size:28px;
-    font-weight:bold;
-    margin-bottom:8px;
+  padding:50px 60px;
+  background:#fff;
+  text-align:left;
 }
 
 .placeholder{
-    margin-top:200px;
-    text-align:center;
-    font-size:14px;
-    color:#333;
+  margin-top:200px;
+  text-align:center;
+  font-size:14px;
+  color:#333;
 }
 
+/* ========================= */
 /* SECTION UMUM */
+/* ========================= */
 section{
-    max-width:1000px;
-    margin:0 auto;
-    padding:50px 20px;
+  max-width:1000px;
+  margin:0 auto;
+  padding:50px 20px;
 }
 
-/* HQ */
+h2{
+  margin-bottom:20px;
+}
+
+/* ========================= */
+/* HEADQUARTER */
+/* ========================= */
 .hq-list{
-    display:flex;
-    justify-content:space-around;
-    margin-top:30px;
+  display:flex;
+  justify-content:space-around;
+  margin-top:30px;
 }
 
 .circle{
-    width:130px;
-    height:130px;
-    border:2px solid #333;
-    border-radius:50%;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-weight:bold;
-    color:white;
-    background-size:cover;
-    background-position:center;
-    text-shadow:0 0 6px black;
-}
+  width:130px;
+  height:130px;
+  border:2px solid #333;
+  border-radius:50%;
 
-.circle:hover{
-    cursor:pointer;
-    transform:scale(1.05);
-    transition:0.2s;
-    border:3px solid gold;
-}
+  display:flex;
+  align-items:center;
+  justify-content:center;
 
-.circle.active{
-    border:4px solid lime;
+  font-weight:bold;
+  color:white;
+
+  background-size:cover;
+  background-position:center;
+  text-shadow:0 0 6px black;
 }
 
 .circle:nth-child(1){
-    background-image:url("../img/Jakarta.jpg");
-}
-.circle:nth-child(2){
-    background-image:url("../img/Bandung.png");
-}
-.circle:nth-child(3){
-    background-image:url("../img/Surabaya.jpg");
+  background-image:url("../img/Jakarta.jpg");
 }
 
-/* MESSAGE */
+.circle:nth-child(2){
+  background-image:url("../img/Bandung.png");
+}
+
+.circle:nth-child(3){
+  background-image:url("../img/Surabaya.jpg");
+}
+
+.circle:hover{
+  cursor:pointer;
+  transform:scale(1.05);
+  transition:0.2s;
+}
+
+.circle.active{
+  border:4px solid lime;
+}
+
+/* ========================= */
+/* MESSAGE FORM */
+/* ========================= */
 .message-wrap{
-    display:flex;
-    gap:30px;
-    margin-top:25px;
+  display:flex;
+  gap:30px;
 }
 
 form{
-    flex:1;
-    display:flex;
-    flex-direction:column;
+  flex:1;
+  display:flex;
+  flex-direction:column;
 }
 
 form input,
 form textarea{
-    margin-bottom:15px;
-    padding:10px;
-    border:1px solid #aaa;
-    border-radius:4px;
+  margin-bottom:15px;
+  padding:10px;
+  border:1px solid #aaa;
+  border-radius:4px;
 }
 
 .radio-group{
-    display:flex;
-    gap:25px;
-    margin-bottom:15px;
+  display:flex;
+  gap:25px;
+  margin-bottom:15px;
 }
 
 form button{
-    padding:12px;
-    background:#333;
-    color:#fff;
-    border:none;
-    border-radius:4px;
-    cursor:pointer;
+  padding:12px;
+  background:#333;
+  color:white;
+  border:none;
+  cursor:pointer;
 }
 
 .result{
-    flex:1;
-    border:1px solid #aaa;
-    padding:20px;
-    background:#fff;
-    border-radius:4px;
+  flex:1;
+  border:1px solid #aaa;
+  padding:20px;
+  background:#fff;
 }
 
 #hqPreview img{
-    margin-top:10px;
-    width:130px;
-    height:130px;
-    border-radius:12px;
-    object-fit:cover;
-    border:2px solid #333;
+  margin-top:10px;
+  width:130px;
+  height:130px;
+  border-radius:12px;
+  object-fit:cover;
+  border:2px solid #333;
 }
 
+/* ========================= */
 /* FOOTER */
+/* ========================= */
 footer{
-    width:100%;
-    text-align:center;
-    padding:20px;
-    font-size:14px;
-    background:#333;
-    color:white;
+  width:100%;
+  text-align:center;
+  padding:20px;
+  background:#333;
+  color:white;
 }
+
 
 /* RESPONSIVE */
 @media(max-width:768px){
