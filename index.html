@@ -1,102 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>My Website</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TirtaRevou</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 
-<nav class="navbar">
-    <div class="logo">My Website</div>
-    <ul class="menu">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#profile">Our Profile</a></li>
-        <li><a href="#message">Message Us</a></li>
-    </ul>
-</nav>
+  <!-- ===== NAVBAR ===== -->
+  <header class="navbar">
+    <div class="logo">TirtaRevou</div>
 
-<section id="home" class="banner">
-    <h1 id="welcomeText">Hi, Welcome To Website</h1>
-    <p>Ini adalah website latihan pertama</p>
-</section>
+    <nav class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#profile">Our Profile</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#message">Message Us</a>
+    </nav>
+  </header>
 
-<section id="profile" class="profile">
-    <h2>About The Company</h2>
+  <!-- ===== HOME ===== -->
+  <section id="home" class="home">
+    <h1>Hi <span id="username">Name</span>, Welcome to Website</h1>
+    <p>Ini adalah mini project website untuk submission RevoU.</p>
+  </section>
+
+  <hr />
+
+  <!-- ===== HEADQUARTERS ===== -->
+  <section id="portfolio" class="headquarters">
+    <h2>Our Headquarters</h2>
+
+    <div class="hq-list">
+
+      <div class="hq-item">
+        <img src="images/Jakarta.jpg" class="hq-img" />
+        <p>Jakarta</p>
+      </div>
+
+      <div class="hq-item">
+        <img src="images/Bandung.png" class="hq-img" />
+        <p>Bandung</p>
+      </div>
+
+      <div class="hq-item">
+        <img src="images/Surabaya.jpg" class="hq-img" />
+        <p>Surabaya</p>
+      </div>
+
+    </div>
+  </section>
+
+  <hr />
+
+  <!-- ===== PROFILE ===== -->
+  <section id="profile" class="profile">
+    <h2>Our Profile</h2>
+
     <p>
-        Perusahaan kami bergerak di bidang teknologi dan layanan digital
-        untuk membantu bisnis berkembang lebih cepat dan efisien.
+      <b>TirtaRevou</b> adalah perusahaan digital kreatif yang fokus pada
+      pengembangan website modern dan responsive.
     </p>
 
-    <div class="vm">
-        <div class="box">
-            <h3>Vision</h3>
-            <p>Menjadi perusahaan teknologi terbaik dan terpercaya.</p>
-        </div>
-        <div class="box">
-            <h3>Mission</h3>
-            <ul>
-                <li>Menyediakan solusi digital berkualitas</li>
-                <li>Mengutamakan kepuasan pelanggan</li>
-                <li>Terus berinovasi mengikuti perkembangan zaman</li>
-            </ul>
-        </div>
-    </div>
-</section>
+    <h3>Vision</h3>
+    <p>Menjadi partner digital terbaik untuk semua orang.</p>
 
-<section class="hq">
-    <h2>Our Headquarter</h2>
-    <div class="hq-list">
-        <div class="circle">Jakarta</div>
-        <div class="circle">Bandung</div>
-        <div class="circle">Surabaya</div>
-    </div>
-</section>
+    <h3>Mission</h3>
+    <ul>
+      <li>Membuat website modern dan user-friendly</li>
+      <li>Mendukung transformasi digital</li>
+      <li>Memberikan pengalaman terbaik</li>
+    </ul>
+  </section>
 
-<section id="message" class="message">
+  <hr />
+
+  <!-- ===== MESSAGE US ===== -->
+  <section id="message" class="message-us">
     <h2>Message Us</h2>
 
-    <div class="message-wrap">
-        <!-- FORM -->
-        <form id="formMessage">
-            <label>Nama</label>
-            <input type="text" id="name">
+    <div class="message-container">
 
-            <label>Tanggal Lahir</label>
-            <input type="date" id="birth">
+      <!-- FORM -->
+      <form id="messageForm" class="form-box">
+        <label>Nama</label>
+        <input type="text" id="nameInput" />
 
-            <label>Jenis Kelamin</label>
-            <div class="radio-group">
-                <label>
-                    <input type="radio" name="gender" value="Laki-laki"> Laki-laki
-                </label>
-                <label>
-                    <input type="radio" name="gender" value="Perempuan"> Perempuan
-                </label>
-            </div>
+        <label>Email</label>
+        <input type="email" id="emailInput" />
 
-            <label>Pesan</label>
-            <textarea id="msg"></textarea>
+        <label>Phone Number</label>
+        <input type="text" id="phoneInput" />
 
-            <button type="submit">Submit</button>
-        </form>
+        <label>Message</label>
+        <textarea id="messageInput"></textarea>
 
-        <!-- HASIL -->
-        <div class="result">
-            <p><b>Current time :</b> <span id="time"></span></p>
-            <p><b>Nama :</b> <span id="rName"></span></p>
-            <p><b>Tanggal Lahir :</b> <span id="rBirth"></span></p>
-            <p><b>Jenis Kelamin :</b> <span id="rGender"></span></p>
-            <p><b>Pesan :</b> <span id="rMsg"></span></p>
-        </div>
+        <button type="submit">Submit</button>
+      </form>
+
+      <!-- OUTPUT -->
+      <div class="output-box">
+        <p><b>Current time:</b> <span id="currentTime"></span></p>
+        <p><b>Nama:</b> <span id="outName"></span></p>
+        <p><b>Email:</b> <span id="outEmail"></span></p>
+        <p><b>Phone:</b> <span id="outPhone"></span></p>
+        <p><b>Message:</b> <span id="outMessage"></span></p>
+      </div>
+
     </div>
-</section>
+  </section>
 
-<footer>
-    Created by Kamu
-</footer>
-
-<script src="js/script.js"></script>
+  <!-- JS -->
+  <script src="js/script.js"></script>
 </body>
 </html>
